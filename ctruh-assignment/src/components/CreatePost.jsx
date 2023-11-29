@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 import styles from "../stylesheet/CreatePost.module.css"
 
 const CreatePost = ({ posts, setPosts, modalOpen, setModalOpen }) => {
@@ -31,8 +32,9 @@ const CreatePost = ({ posts, setPosts, modalOpen, setModalOpen }) => {
             {modalOpen && (
                 <div className={styles.modalOverlay}>
                     <div className={styles.modal}>
+                      
                         <span className={styles.closeBtn} onClick={() => setModalOpen(false)}>
-                            &times;
+                          
                         </span>
                         <h2>Create New Post</h2>
                         <form onSubmit={handleSubmit}>
