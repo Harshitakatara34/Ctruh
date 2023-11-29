@@ -1,0 +1,49 @@
+.postcard {
+  background: #dbe6f6;
+  background: radial-gradient(
+    circle,
+    rgb(213, 235, 235),
+    rgba(104, 233, 233, 0.836)
+  );
+
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  height: 300px;
+
+  border-radius: 20px;
+
+  padding: 20px;
+  transition: 0.5s ease-out;
+}
+
+.postlist {
+  width: 95%;
+
+  gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  margin: auto;
+  display: grid;
+  margin-top: 0;
+}
+
+.postcard p {
+  color: #333;
+  line-height: 1.4;
+  text-align: left;
+}
+.postcard h2 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.postcard:hover {
+  border-color: teal;
+  box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+}
+
+.linkClass {
+  text-decoration: none;
+  color: inherit;
+}
