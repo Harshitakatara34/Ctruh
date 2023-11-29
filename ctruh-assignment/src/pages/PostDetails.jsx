@@ -18,16 +18,11 @@ const PostDetails = () => {
         setLoading(false);
       })
       .catch((error) => {
-        console.error( error);
+        console.error(error);
         setError("Error");
         setLoading(false);
       });
   };
-
-
-
-
-
 
   const getPost = () => {
     axios
@@ -42,8 +37,6 @@ const PostDetails = () => {
         setLoading(false);
       });
   };
-
- 
 
   useEffect(() => {
     getPost();
