@@ -20,8 +20,8 @@ const Post = () => {
 
             })
             .catch(error => {
-                console.error('Error fetching posts:', error);
-                setError('Error fetching posts. Please try again later.');
+                console.error( error);
+                setError('Error');
 
                 setLoading(false);
 
@@ -43,7 +43,7 @@ const Post = () => {
     const handleDelete = async (postId) => {
         try {
             await axios.delete(`https://jsonplaceholder.typicode.com/posts/${postId}`).then((res) => {
-                alert("Post Successfully Deleted!")
+                alert("Post  Deleted!")
                 setPosts(posts.filter(post => post.id !== postId));
 
             });
@@ -109,13 +109,13 @@ const Post = () => {
                     style={{
                         marginLeft: "10px",
                         width: "200px",
+                        fontWeight: "600",
+                        fontSize: "16px",
                         borderStyle: "none",
-                        background: "teal",
                         padding: "10px",
                         borderRadius: "5px"
                         , color: "white",
-                        fontWeight: "600",
-                        fontSize: "16px",
+                        background: "teal",
                         marginBottom: "30px",
                         marginTop:"20px"
                     }}>Add New</button>
